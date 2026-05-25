@@ -1,0 +1,9 @@
+{
+  "name": "Emilie & Fredrik bryllup",
+  "short_name": "E&F",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fbfaf6",
+  "theme_color": "#28302a",
+  "description": "Bryllupsapp med program, praktisk info, RSVP og ønskeliste."
+}
