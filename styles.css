@@ -56,6 +56,7 @@ a {
 
 .hero-image {
   object-fit: cover;
+  object-position: 50% 42%;
   z-index: -2;
 }
 
@@ -117,7 +118,8 @@ a {
 .hero h1,
 .section h2,
 .info-band h2,
-.wishlist h2 {
+.wishlist h2,
+.guest-section h2 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 500;
@@ -207,7 +209,8 @@ a {
 
 .section,
 .info-band,
-.wishlist {
+.wishlist,
+.guest-section {
   padding: clamp(56px, 8vw, 104px) clamp(18px, 5vw, 72px);
 }
 
@@ -219,12 +222,14 @@ a {
 
 .section h2,
 .info-band h2,
-.wishlist h2 {
+.wishlist h2,
+.guest-section h2 {
   font-size: clamp(42px, 6vw, 76px);
 }
 
 .section-heading p:not(.eyebrow),
-.info-band p {
+.info-band p,
+.guest-section p {
   color: var(--muted);
   line-height: 1.65;
   font-size: 17px;
@@ -372,7 +377,63 @@ a {
   border-color: var(--soft);
 }
 
+.guest-section {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(28px, 6vw, 72px);
+  background: #f3efe7;
+}
+
+.guest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.guest-grid article {
+  min-height: 260px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid var(--soft);
+  border-radius: 8px;
+}
+
+.guest-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(124, 139, 116, 0.22), rgba(180, 109, 104, 0.2)),
+    #fffaf1;
+  color: var(--sage);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 54px;
+}
+
+.guest-grid h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.guest-grid p {
+  margin: 0;
+  font-size: 15px;
+}
+
 @media (max-width: 760px) {
+  .hero-image {
+    object-position: 50% 35%;
+  }
+
   .hero {
     min-height: 86vh;
     padding-bottom: 42px;
@@ -402,12 +463,14 @@ a {
 
   .section,
   .info-band,
-  .wishlist {
+  .wishlist,
+  .guest-section {
     grid-template-columns: 1fr;
   }
 
   .details-grid,
-  .wish-list {
+  .wish-list,
+  .guest-grid {
     grid-template-columns: 1fr;
   }
 
