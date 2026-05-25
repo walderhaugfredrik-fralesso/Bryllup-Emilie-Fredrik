@@ -5,6 +5,7 @@ const files = [
   "./styles.css",
   "./script.js",
   "./manifest.webmanifest",
+  "./assets/couple-hero.jpeg",
   "./assets/wedding-hero.png",
 ];
 
